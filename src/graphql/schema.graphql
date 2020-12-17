@@ -1,0 +1,21 @@
+type Query{
+    ping:String!
+    getMessages:[Message]
+    getMessage(id:String!):Message
+}
+type Mutation{
+    createMessage(id:String!,name:String!,email:String!,age:String!,address:String!,phone:String!):Message
+    updateMessage(id:String!,name:String!,email:String!,age:String!,address:String!,phone:String!):Message
+    deleteMessage(id:String!):Message
+  
+    
+}
+
+type Message{
+    _id:String!,
+    name:String,
+    email:String,
+    age:String,
+    address:String,
+    phone:String
+}
